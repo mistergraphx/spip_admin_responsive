@@ -35,14 +35,13 @@ Le plugin n'apporte principalement que des surcharges css, basées sur les media
 
 ## TODO
 
-*   Améliorer la gestion du changement de statut dans les liste-objets
-*   Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
-*   Corriger la désactivation du positionnement fait en js des sous-menu du bando,
-    window.width < breakpoint
-
-*	Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
+-  [ ] Améliorer la gestion du changement de statut dans les liste-objets
+-  [ ] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
+- [ ] Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
 
 ## CHANGELOGS
+
+*   [x] Corriger la désactivation du positionnement fait en js des sous-menu du bando, `window.width < breakpoint `
 
 Sat Jul 23 08:52:44 2016 :
 

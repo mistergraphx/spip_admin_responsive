@@ -85,12 +85,16 @@ jQuery(document).ready(function(){
 
 	// Controler la position verticale des sous-menus
 	// pour l'instant, effectuer a chaque hover, en cas de changement de taille d'affichage par exemple
-	//jQuery('#bando_navigation').hover(function(){
-	//	hauteur = parseInt(jQuery('#bando_navigation .largeur').height())
-	//		+  parseInt(jQuery('#bando_navigation').css("padding-top"))
-	//		+  parseInt(jQuery('#bando_navigation').css("padding-bottom"));
-	//	jQuery('#bando_navigation ul li>ul').css({'top':hauteur});
-	//});
+	// et uniquement en vue desktop
+	var documentWidth = jQuery(window).width();
+	if(documentWidth >= 1023){ // Breakpoint defini dans les css
+		jQuery('#bando_navigation').hover(function(){
+			hauteur = parseInt(jQuery('#bando_navigation .largeur').height())
+				+  parseInt(jQuery('#bando_navigation').css("padding-top"))
+				+  parseInt(jQuery('#bando_navigation').css("padding-bottom"));
+			jQuery('#bando_navigation ul li>ul').css({'top':hauteur});
+		});
+	}
 
 	jQuery('#bando_navigation li').menuFocus();
 	// desactiver le click par default pour le touch
