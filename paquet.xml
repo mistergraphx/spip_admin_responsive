@@ -1,0 +1,22 @@
+<paquet
+	prefix="prive_responsive"
+	categorie="theme"
+	version="1.0.0"
+	etat="dev"
+	compatibilite="[3.0.0;3.1.*]"
+	logo=""
+	documentation=""
+>
+	<nom>Espace prive responsive</nom>
+	<auteur lien='http://mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
+
+	<licence>GNU/GPL</licence>
+	
+	<pipeline nom="formulaire_charger" inclure="prive_responsive_pipelines.php" />
+	<pipeline nom="formulaire_verifier" inclure="prive_responsive_pipelines.php" />
+	<pipeline nom="recuperer_fond" inclure="prive_responsive_pipelines.php" />
+	<pipeline nom="header_prive" inclure="prive_responsive_pipelines.php" />
+		
+	<!--<style source="css/prive_responsive.css" type="prive"/>-->
+	
+</paquet>
