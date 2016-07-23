@@ -38,6 +38,7 @@ Le plugin n'apporte principalement que des surcharges css, basées sur les media
 -  [ ] Améliorer la gestion du changement de statut dans les liste-objets
 -  [ ] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
 - [ ] Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
+- [ ] sur les `.box.simple.sous-rub` le js est en dur dans le squelette avec onClick, ce qui oblige a une surcharge.
 
 ## CHANGELOGS
 
