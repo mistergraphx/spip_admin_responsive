@@ -2,10 +2,28 @@
 
 Plugin Thème / prototype d'interface d'administration responsive pour le cms spip.
 
+Ce plugin propose **une base de réflexion sur la mise en place d'une interface utilisable sur périphériques mobiles pour SPIP**.
+
+Le plugin n'apporte principalement que des surcharges css, basées sur les media-queries, actuellement le ciblage se fait sur les écrans de < 1025px.
+
+A la différence d'autres projets similaires :
+- pas de framework , 
+- ni modification ou surcharge du markup
+
+
+
+
+**Si vous êtes intéressé, utilisez, voulez contribuer, réfléchir à ce projet : n'hésitez pas a proposer une pull-request ou déposer une issue.**
+
 
 
 
 ## TODO
+
+*   Améliorer la gestion du changement de statut dans les liste-objets
+*   Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
+*   Corriger la désactivation du positionnement fait en js des sous-menu du bando,
+    window.width < breakpoint
 
 ## CHANGELOGS
 
