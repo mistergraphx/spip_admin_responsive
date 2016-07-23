@@ -24,7 +24,21 @@ Le plugin n'apporte principalement que des surcharges css, basées sur les media
 	*	Les sous menu apparaissent au touch a droite de l'icône
 *	Amélioration des éléments cliquables / touchables :  
 	L'interface d'origine propose des liens/éléments d'interface de taille trop petite pour une utilisation correcte en mode touch. Les icônes des outils rapides, les listes-objets sont donc revus progressivement notamment sur le padding les entourants (cf : https://material.google.com/layout/metrics-keylines.html#metrics-keylines-touch-target-size)
-	
+
+---
+
+## C'est fait comment
+
+Plutôt que de faire des grand dessins et des explications, souvent  je préfère "prototyper directement dans le navigateur web", il est vrai que c'est du "quick & dirty", mais ce n'est généralement pas fait pour durer ou finir en l'état.
+
+Les css sont rédigées et compilées avec sass, elle ne sont pas dans le dépôt pour le moment, si vous souhaitez apporter une amélioration, ou souhaitez participer, je peut les ajouter.
+
+**Pré-requis / libs** :
+
+- libsass
+- bourbon
+- susy
+- include-media
 
 ---
 
