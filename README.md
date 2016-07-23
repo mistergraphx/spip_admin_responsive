@@ -18,7 +18,7 @@ Le plugin n'apporte principalement que des surcharges css, basées sur les media
 *	Le layout :
 	*	originalement en px utilise les %
 	*	les modes .etroit et .large deviennent identiques
-	*	les blocs #navigation et extra passeen 100% de large (voir la todo).
+	*	les blocs #navigation et extra passeen 100% de large ([voir la todo](#todo)).
 *	Le bando (menu principal)
 	*	passe en position fixed, les icones en liste verticales et est aligné sur la gauche de l'écran : ceci permettant un accès constant, même sur des pages a contenu long
 	*	Les sous menu apparaissent au touch a droite de l'icone
