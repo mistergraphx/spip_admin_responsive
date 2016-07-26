@@ -99,14 +99,11 @@
   .liste-objets p.pagination {
     padding: 0.75em 0.375em;
   }
-  .liste-objets .pagination .lien_pagination, .liste-objets .pagination .on {
+  .liste-objets .pagination .lien_pagination,
+  .liste-objets .pagination .on {
     padding: 8px;
   }
   .liste-objets .pagination .sep {
-    font-size: .9em;
-  }
-}
-ation .sep {
     font-size: .9em;
   }
 }
