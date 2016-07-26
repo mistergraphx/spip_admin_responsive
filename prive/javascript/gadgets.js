@@ -1,5 +1,5 @@
 function init_gadgets(url_menu_rubrique){
-	jQuery('#boutonbandeautoutsite').one('mouseover',function(){
+	jQuery('#boutonbandeautoutsite').on('mouseover',function(){
 		jQuery(this).siblings('ul').find('li:first>a').animeajax();
 		jQuery.ajax({
 						url: url_menu_rubrique,
@@ -16,6 +16,7 @@ function focus_zone(selecteur){
 	jQuery(selecteur).eq(0).find('a,input:visible').get(0).focus();
 	return false;
 }
+
 jQuery(document).ready(function(){
 	init_gadgets(url_menu_rubrique);
 	var is_open = 0;
@@ -95,15 +96,54 @@ jQuery(document).ready(function(){
 			jQuery('#bando_navigation ul li>ul').css({'top':hauteur});
 		});
 	}
-
+	
+	// Navigation principale : Bando
 	jQuery('#bando_navigation li').menuFocus();
 	// desactiver le click par default pour le touch
 	// sauf pour l'accueil
-	jQuery('#bando_navigation ul.deroulant > li').not('.first').find('>a').on('click',function(e){
+	jQuery('#bando_navigation ul.deroulant > li')
+		.not('.first')
+		.find('>a')
+		.on('click',function(e){
 			e.preventDefault(); // on desactive le clic
-	});
-	jQuery('#bando_outils ul.bandeau_rubriques li').menuFocus();
+			
+			// Positionnement des sou-menus
+			var hauteur = '';
+			var menu_item = jQuery(this);
+			var icn_offset = jQuery(this).offset();
+			var sub_height = jQuery(this).parent().find('> ul').height();
+			
+			var hauteur= -( (menu_item.innerHeight() / 2) + ( sub_height / 2));
+				
+			//console.log({
+			//	sub : sub_height,
+			//	item: menu_item.innerHeight(),
+			//	top: hauteur
+			//});
+			
+			jQuery(this).parent().find('> ul').css({'top':hauteur});
 
+		});
+	
+	// OUtils rapides
+	// La boussole Plan du site outils rapides
+	jQuery('#bando_outils ul.bandeau_rubriques li').menuFocus();
+	
+	// Le sous menu est chargé en ajax au clic du coup il faut cibler en amont
+	////jQuery('#bando_outils ul.bandeau_rubriques li > a').on('click',function(e){
+	////	e.preventDefault;
+	////	
+	////	
+	////	console.log(jQuery(this).find('li.haschild'));
+	////	jQuery(this).find('li.haschild').on('click',function(e){
+	////		e.preventDefault;
+	////		return false;
+	////	});
+	////
+	////	return false;
+	////});
+
+	
 	jQuery('#bandeau_haut #formRecherche input').hover(function(){
 		jQuery('#bandeau_haut ul.actif').trigger('mouseout');
 	});
@@ -116,4 +156,13 @@ jQuery(document).ready(function(){
 		});
 	if (typeof window.test_accepte_ajax != "undefined")
 		test_accepte_ajax();
+	
+	//jQuery(".titrem").find(">a").not('.titremancre').on('click', function(e){
+	//	e.preventDefault();
+	//	//jQuery(this).find();
+	//	
+	//	//console.log(jQuery(this).parents());
+	//});
+	//
+	
 });

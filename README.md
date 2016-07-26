@@ -59,6 +59,10 @@ Les css sont rédigées et compilées avec sass, elle ne sont pas dans le dépô
 
 ## CHANGELOGS
 
+**1.0.4**
+
+- correction sur le placement des sous-menus du bando, on centre le sous-menu sur le centre de l'item .actif. Évite que sur le menu configuration ou on as beaucoup d'items on sorte de la page.
+
 **1.0.3**
 
 css générées plus lisibles :
