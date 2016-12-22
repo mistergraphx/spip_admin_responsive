@@ -59,7 +59,7 @@ n'hésitez pas a proposer une pull-request ou déposer une issue.**
 -   bando_identite, bando_session :
     - on masque l'image du menu lang en mode mobile pour gagner de l'espace
     - passage en inline-block et alignement a droite de .session et .nom_site_spip en mode mobile
--   Boussole/ Navigation rapide
+-   Boussole/ Navigation rapide  
     - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
     
 **1.0.5**
