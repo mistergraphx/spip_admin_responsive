@@ -13,7 +13,7 @@ body,body.etroit,body.large{min-width:100%}
 .etroit #extra .spip_logos,.etroit #navigation .spip_logos,.large #extra .spip_logos,.large #navigation .spip_logos{max-width:100%;height:auto}
 .etroit #contenu,.large #contenu{clear:both;width:100%;float:left;margin-left:0;margin-right:0}
 }
-@media (max-width:767px){.etroit #page .largeur,.large #page .largeur{padding-left:70px}
+@media (max-width:767px){#bando_identite .largeur,#bando_outils .largeur,.etroit #page .largeur,.large #page .largeur{padding-left:70px}
 .etroit .ajax-id-extra,.etroit .ajax-id-navigation{float:left}
 .etroit .ajax-id-navigation{width:100%}
 .etroit .ajax-id-extra{width:100%;margin-left:0}
@@ -32,6 +32,11 @@ body,body.etroit,body.large{min-width:100%}
 .etroit #bando_navigation ul.deroulant li.actif ul,.etroit #bando_navigation ul.deroulant li.actif_tempo ul,.large #bando_navigation ul.deroulant li.actif ul,.large #bando_navigation ul.deroulant li.actif_tempo ul{left:60px}
 #bando_haut ul.deroulant li a{font-size:8px;padding-top:50px}
 #bando_navigation ul.deroulant>li{min-width:50px}
+#bando_identite a{padding:8px 0}
+#bando_identite p.nom_site_spip,#bando_identite p.session{display:inline-block;width:100%;float:right;text-align:right;white-space:nowrap}
+#bando_identite p.nom_site_spip .sep,#bando_identite p.session .sep{padding:0 1px}
+#bando_identite .menu_lang img{display:none}
+#bando_outils ul.deroulant li ul.cols_1{z-index:1000}
 }
 @media (max-width:1023px){.liste-objets table td,.liste-objets table th,.liste-objets table thead th{padding:9px}
 .liste-objets table thead th{font-size:1.2em}

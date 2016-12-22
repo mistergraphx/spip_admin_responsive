@@ -1,4 +1,4 @@
-function init_gadgets(url_menu_rubrique){
+function init_gadgets(url_menu_rubrique,breakpoints){
 	jQuery('#boutonbandeautoutsite').on('mouseover',function(){
 		jQuery(this).siblings('ul').find('li:first>a').animeajax();
 		jQuery.ajax({
@@ -8,6 +8,12 @@ function init_gadgets(url_menu_rubrique){
 							jQuery('#boutonbandeautoutsite')
 							  .after(c)
 								.parent().find('li').menuFocus();
+							if(jQuery(window).width() <= breakpoints.large){
+								jQuery('#bando_outils').find('li.haschild > a').on('click',function(e){
+									e.preventDefault(); // on desactive le clic
+								});
+							}
+								
 						}
 					});
 	});
@@ -18,8 +24,17 @@ function focus_zone(selecteur){
 }
 
 jQuery(document).ready(function(){
-	init_gadgets(url_menu_rubrique);
+	var documentWidth = jQuery(window).width();
+	var breakpoints = {
+		small: 320,
+		medium: 750,
+		large: 1023
+	};
+	
+	init_gadgets(url_menu_rubrique,breakpoints);
+	
 	var is_open = 0;
+	
 	jQuery.fn.menuItemOpen = function(){
 		jQuery(this)
 			.addClass('actif')
@@ -28,6 +43,7 @@ jQuery(document).ready(function(){
 		is_open = true;
 		return this;
 	}
+	
 	jQuery.fn.menuItemClose = function(){
 		jQuery(this)
 			.removeClass('actif_tempo');
@@ -87,8 +103,8 @@ jQuery(document).ready(function(){
 	// Controler la position verticale des sous-menus
 	// pour l'instant, effectuer a chaque hover, en cas de changement de taille d'affichage par exemple
 	// et uniquement en vue desktop
-	var documentWidth = jQuery(window).width();
-	if(documentWidth >= 1023){ // Breakpoint defini dans les css
+	
+	if(documentWidth >= breakpoints.large){ // Breakpoint defini dans les css
 		jQuery('#bando_navigation').hover(function(){
 			hauteur = parseInt(jQuery('#bando_navigation .largeur').height())
 				+  parseInt(jQuery('#bando_navigation').css("padding-top"))
@@ -115,12 +131,6 @@ jQuery(document).ready(function(){
 			
 			var hauteur= -( (menu_item.innerHeight() / 2) + ( sub_height / 2));
 				
-			//console.log({
-			//	sub : sub_height,
-			//	item: menu_item.innerHeight(),
-			//	top: hauteur
-			//});
-			
 			jQuery(this).parent().find('> ul').css({'top':hauteur});
 
 		});
@@ -129,24 +139,20 @@ jQuery(document).ready(function(){
 	// La boussole Plan du site outils rapides
 	jQuery('#bando_outils ul.bandeau_rubriques li').menuFocus();
 	
-	// Le sous menu est chargé en ajax au clic du coup il faut cibler en amont
-	////jQuery('#bando_outils ul.bandeau_rubriques li > a').on('click',function(e){
-	////	e.preventDefault;
-	////	
-	////	
-	////	console.log(jQuery(this).find('li.haschild'));
-	////	jQuery(this).find('li.haschild').on('click',function(e){
-	////		e.preventDefault;
-	////		return false;
-	////	});
-	////
-	////	return false;
-	////});
-
+	if(documentWidth <= breakpoints.large){
+		jQuery('#boutonbandeautoutsite').on('click',function(e){
+				e.preventDefault();
+				jQuery('#bando_outils').find('li.haschild > a').on('click',function(e){
+					e.preventDefault(); // on desactive le clic
+				});
+		});
 	
+	}
+		
 	jQuery('#bandeau_haut #formRecherche input').hover(function(){
 		jQuery('#bandeau_haut ul.actif').trigger('mouseout');
 	});
+	
 	jQuery('#bando_liens_rapides a')
 		.focus(function(){
 			jQuery('#bando_liens_rapides').addClass('actif');
@@ -157,12 +163,5 @@ jQuery(document).ready(function(){
 	if (typeof window.test_accepte_ajax != "undefined")
 		test_accepte_ajax();
 	
-	//jQuery(".titrem").find(">a").not('.titremancre').on('click', function(e){
-	//	e.preventDefault();
-	//	//jQuery(this).find();
-	//	
-	//	//console.log(jQuery(this).parents());
-	//});
-	//
 	
 });

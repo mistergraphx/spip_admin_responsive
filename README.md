@@ -21,59 +21,49 @@ Le plugin n'apporte principalement que des surcharges css, basées sur les media
 
 ## Surcharges
 
-*   prive/javascriptt/gadget.js : pour la désactivation du clic sur les items de premier niveau, qui perturbe en mode touch.
+*   prive/javascript/gadget.js :
+    pour la désactivation du clic qui perturbe en mode touch.
 *   Surcharge du squelettes/inclure/head
     `<!--<meta name="viewport" content="width=device-width" />-->`
     pour
     `<meta name="viewport" content="width=device-width, initial-scale=1"/>`
     evite un problème sur le `min-width:100%` apliqué a la balise body sur les mobiles
+*   surcharge de inclure/bare-nav et de son fichier fonction (rien de modifié mais provoque une erreur si on ne le duplique pas)   
     
-    
----
-
-## C'est fait comment
-
-Plutôt que de faire des grand dessins et des explications, souvent  je préfère "prototyper directement dans le navigateur web", il est vrai que c'est du "quick & dirty", mais ce n'est généralement pas fait pour durer ou finir en l'état.
-
-Les css sont rédigées et compilées avec sass, elle ne sont pas dans le dépôt pour le moment, si vous souhaitez apporter une amélioration, ou souhaitez participer, je peut les ajouter.
-
-**Pré-requis / libs** :
-
-- libsass
-- bourbon
-- susy
-- include-media
-
 ---
 
 **Si vous êtes intéressé, utilisez, voulez contribuer, réfléchir à ce projet :
 n'hésitez pas a proposer une pull-request ou déposer une issue.**
 
-**Ce travail est développé sur mon temps libre, si vous êtes créateur/revendeur de site, agence web et utilisez ce module spip à des fins professionelles ou commerciales,
-ou si vous souhaitez que son développement avance plus vite, merci de me contacter pour sponsoriser le projet**
-
 ---
-
-    
-
 
 ## TODO
 
-- [ ] Dans le portfolio des objets le boutons (orienter, rotation, …) apparaissent au survol ou un clic sur le div via un onclick.
-- [ ] récupérer les icones au format svg pour les menus principaux du bando.
-- [ ] Améliorer la gestion du changement de statut dans les liste-objets
-- [ ] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
-- [ ] Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
+- [ ]   Dans le portfolio des objets le boutons (orienter, rotation, …) apparaissent au survol ou un clic sur le div via un onclick.
+- [ ]   récupérer les icones au format svg pour les menus principaux du bando.
+- [ ]   Améliorer la gestion du changement de statut dans les liste-objets
+- [ ]   Boussole/ Navigation rapide
+        - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
+        - [ ] Opter pour un select ou dropdown en mode mobile
+- [ ]   Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
         si on est en mode .etroit dans les préférence de l'utilisateur le bloc extra est intégré a #navigation
         le mode .etroit .large n'a pas de sens en mobile ou tablet mais on peut envisager le garder pour le mode desktop
         revoir le ciblage des css avec `.large #navigation` et `.etroit #Navigation` ou suprimer depuis body.html surchargé
-- [ ] Revoir Les paginations en bas des liste/tableaux surtout en mode mobile
-- [ ] sur les `.box.simple.sous-rub` le js est en dur dans le squelette avec onClick, ce qui oblige a une surcharge.
+- [ ]   Revoir Les paginations en bas des liste/tableaux surtout en mode mobile
+- [ ]   sur les `.box.simple.sous-rub` le js est en dur dans le squelette avec onClick, ce qui oblige a une surcharge.
 
 --- 
 
 ## CHANGELOGS
 
+**1.0.6**
+
+- bando_identite, bando_session :
+    - on masque l'image du menu lang en mode mobile pour gagner de l'espace
+    - passage en inline-block et alignement a droite de .session et .nom_site_spip en mode mobile
+- Boussole/ Navigation rapide
+    - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
+    
 **1.0.5**
 
 - surcharge du head pour corriger la meta viewport et forcer le scale a 1
