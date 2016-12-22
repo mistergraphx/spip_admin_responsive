@@ -40,7 +40,7 @@ n'hésitez pas a proposer une pull-request ou déposer une issue.**
 - [ ]   Dans le portfolio des objets le boutons (orienter, rotation, …) apparaissent au survol ou un clic sur le div via un onclick.
 - [ ]   récupérer les icones au format svg pour les menus principaux du bando.
 - [ ]   Améliorer la gestion du changement de statut dans les liste-objets
-- [ ]   Boussole/ Navigation rapide  
+- Boussole/ Navigation rapide  
         - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
         - [ ] Opter pour un select ou dropdown en mode mobile
 - [ ]   Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
