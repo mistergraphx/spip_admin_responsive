@@ -41,8 +41,8 @@ n'hésitez pas a proposer une pull-request ou déposer une issue.**
 - [ ]   récupérer les icones au format svg pour les menus principaux du bando.
 - [ ]   Améliorer la gestion du changement de statut dans les liste-objets
 - Boussole/ Navigation rapide  
-        - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
-        - [ ] Opter pour un select ou dropdown en mode mobile
+    - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
+    - [ ] Opter pour un select ou dropdown en mode mobile
 - [ ]   Revoir les .bloc dans les #navigation, #extra, ils passent en 100% actuellement ce qui n'est pas très esthétique.
         si on est en mode .etroit dans les préférence de l'utilisateur le bloc extra est intégré a #navigation
         le mode .etroit .large n'a pas de sens en mobile ou tablet mais on peut envisager le garder pour le mode desktop
