@@ -4,10 +4,8 @@ Plugin Thème / prototype d'interface d'administration responsive pour le cms sp
 
 Ce plugin propose **une base de "réflexion" sur la mise en place d'une interface utilisable sur périphériques mobiles pour SPIP**.
 
-
-## Ça fait quoi
-
-Le plugin n'apporte principalement que des surcharges css, basées sur les media-queries, actuellement le ciblage se fait sur les écrans  < 1025px.
+Le plugin n'apporte principalement que des surcharges css,
+basées sur les media-queries, actuellement le ciblage se fait sur les écrans  < 1025px et <780px.
 
 *	Le layout :
 	*	originalement en px utilise les %
@@ -58,10 +56,10 @@ n'hésitez pas a proposer une pull-request ou déposer une issue.**
 
 **1.0.6**
 
-- bando_identite, bando_session :
+-   bando_identite, bando_session :
     - on masque l'image du menu lang en mode mobile pour gagner de l'espace
     - passage en inline-block et alignement a droite de .session et .nom_site_spip en mode mobile
-- Boussole/ Navigation rapide
+-   Boussole/ Navigation rapide
     - [X] Désactiver le clic sur la navigation rapide, comme il a été fait sur les menus du bando
     
 **1.0.5**
