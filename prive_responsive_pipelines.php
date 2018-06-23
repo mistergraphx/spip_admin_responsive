@@ -11,6 +11,3 @@ function prive_responsive_header_prive($flux){
     return $flux;
 }
 
-
-
-?>

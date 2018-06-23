@@ -49,6 +49,8 @@ n'hésitez pas a proposer une pull-request ou déposer une issue.**
         revoir le ciblage des css avec `.large #navigation` et `.etroit #Navigation` ou suprimer depuis body.html surchargé
 - [ ]   Revoir Les paginations en bas des liste/tableaux surtout en mode mobile
 - [ ]   sur les `.box.simple.sous-rub` le js est en dur dans le squelette avec onClick, ce qui oblige a une surcharge.
+- [ ] 	Mis en forme des tableaux :
+		Une piste intéressant en css https://dbushell.com/2016/03/04/css-only-responsive-tables/
 
 --- 
 
